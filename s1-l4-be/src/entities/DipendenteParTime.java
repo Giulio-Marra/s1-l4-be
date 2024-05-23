@@ -18,7 +18,7 @@ public class DipendenteParTime extends Dipendente {
 
     @Override
     public double calculateSalary() {
-        double totaleStipendio = stipendio * this.orelavoro;
+        double totaleStipendio = stipendio * 30 * 4;
         System.out.println("MATRICOLA " + this.matricola + " - STIPENDIO " + totaleStipendio + " €");
         return totaleStipendio;
     }

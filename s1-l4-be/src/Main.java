@@ -1,7 +1,6 @@
 import entities.Dipendente;
 import entities.DipendenteFullTime;
 import entities.DipendenteParTime;
-import entities.Dirigente;
 import enums.Dipartimento;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -13,7 +12,7 @@ public class Main {
         //Dipendente nicola = new Dipendente(Dipartimento.AMMINISTRAZIONE);
         Dipendente alberto = new DipendenteFullTime(Dipartimento.PRODUZIONE);
         Dipendente giacomo = new DipendenteParTime(Dipartimento.VENDITE);
-        Dipendente nicola = new Dirigente(Dipartimento.AMMINISTRAZIONE);
+        Dipendente nicola = new DipendenteFullTime(Dipartimento.AMMINISTRAZIONE);
 
         System.out.println("------------------ALBERTO PRIMO IMPIEGO---------------------");
         alberto.showDipendent();
@@ -32,6 +31,14 @@ public class Main {
         System.out.println("---------------ALBERTO CALCOLO SALARIO------------------------");
         alberto.calculateSalary();
 
+        System.out.println("---------------CALCOLO SALARIO TUTTI DIPENDENTI------------------------");
+        Dipendente[] dipendentisalari = {alberto, giacomo, nicola};
+        double totalestipendi = 0;
+        for (int i = 0; i < dipendentisalari.length; i++) {
+            double stipendio = dipendentisalari[i].calculateSalary();
+            totalestipendi = totalestipendi + stipendio;
+            System.out.println("TOTALE STIPENDI DI TUTTI I DIPENDENTI: " + totalestipendi);
 
+        }
     }
 }

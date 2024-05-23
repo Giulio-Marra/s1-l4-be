@@ -15,8 +15,6 @@ public abstract class Dipendente {
         this.matricola = mtrRnd.nextInt(1, 100);
         this.stipendio = 0;
         this.dipartimento = dipartimento;
-
-
     }
 
     public abstract double calculateSalary();
@@ -44,7 +42,7 @@ public abstract class Dipendente {
     }
 
     public double setStipendio(double num) {
-        return stipendio = num;
+        return this.stipendio = num;
     }
 
     public Dipartimento getDipartimento() {

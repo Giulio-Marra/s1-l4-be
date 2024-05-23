@@ -17,9 +17,10 @@ public class DipendenteFullTime extends Dipendente {
 
     @Override
     public double calculateSalary() {
-        getStipendio();
+
         double totaleStipendio = stipendio * 40 * 4;
         System.out.println("MATRICOLA " + this.matricola + " - STIPENDIO " + totaleStipendio + " €");
         return totaleStipendio;
+
     }
 }
